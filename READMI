@@ -1,0 +1,15 @@
+Pasos para la creacion del Chat bot con WhatsApp Bussnes 
+1. https://developers.facebook.com, entrar con tu cuenta para integrar WhatsApp y configurar.
+2. https://business.facebook.com, Para la verificacion de la empresa, número, etc. 
+3. Configurar el Webhook, url/webhook + token y activar
+    • messages
+    • message_deliveries
+    • message_reads
+    • message_statuses
+4. Instalar las dependencias,  npm install
+5. Correr el archivo index.js y npx ngrok http 3000, para la url de prueba.
+6. configuración adicional, https://www.facebook.com/settings/?tab=business_tools
+7.✅ ¿Dónde se paga?
+    • Plataforma	¿Se paga?	¿Para qué sirve?
+    • Meta Developer	✅ Sí	Para usar la API de WhatsApp Business (envío masivo de mensajes).
+    • WhatsApp Business App	❌ No	Solo para responder manualmente desde el celular. Es gratuita.
