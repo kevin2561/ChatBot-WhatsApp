@@ -2,21 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(267deg, #9d1414 0%, #4b52a2 100%); */
+    background-color: #000000c2;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  button {
+    background: linear-gradient(45deg, #25d366, #128c7e);
+    color: white;
+    padding: 18px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+  }
+
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+    background: linear-gradient(45deg, #128c7e, #25d366);
+  }
+
+  button:hover::before {
+    left: 100%;
+  }
+
+  button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+  }
+
+  button span {
+    display: flex;
+    align-items: center;
+  }
+
+  button span img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    button {
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+  }
+</style>
 
 <body>
-    <a href="https://wa.me/+15556401578?text=hola" target="_blank">
-        <button>Chatea con nosotros en WhatsApp</button>
-    </a>
+  <a href="https://wa.me/+15556401578?text=Hola" target="_blank">
+    <button>Escríbemos <span><img src="" alt=""></span></button>
+  </a>
 
 </body>
 
 </html>
 
- <!-- 1261535078950287
+<!-- 1261535078950287
 
 Identificador de número de teléfono: 
 702674569594255
@@ -28,7 +106,7 @@ token
 EAASgqT121ZBABO32U1wGrZAfapkswPLu3QfFQShaAxsioyZBe6sDpeJkLTsU2zwlSsB0FccCbe6H6xLPx5i6Dih06IxtjtVDyIu4LOWiREJNmknW4qwqWmfVlVY0IYMAvtq8ACheoiyhbYCwYQYPfdRaehWmUH3f7Mk0CPB6ShcttRsVRXWM8uq11fODWZCEC4sCXPZCrRO7rbKo2qXOCTkJiPoSonAnJkYzi7I40fwZDZD
  -->
 
- <!-- curl -i -X POST ^
+<!-- curl -i -X POST ^
    https://graph.facebook.com/v17.0/702674569594255/messages ^
    -H "Authorization: Bearer EAASgqT121ZBABO32U1wGrZAfapkswPLu3QfFQShaAxsioyZBe6sDpeJkLTsU2zwlSsB0FccCbe6H6xLPx5i6Dih06IxtjtVDyIu4LOWiREJNmknW4qwqWmfVlVY0IYMAvtq8ACheoiyhbYCwYQYPfdRaehWmUH3f7Mk0CPB6ShcttRsVRXWM8uq11fODWZCEC4sCXPZCrRO7rbKo2qXOCTkJiPoSonAnJkYzi7I40fwZDZD" ^
    -H "Content-Type: application/json" ^
